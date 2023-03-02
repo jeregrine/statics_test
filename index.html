@@ -1,16 +1,20 @@
 <html>
   <body>
     <div>
-      <h4>/static/good.txt</h4>
-      <object data="/static/good.txt" type="text/plain" width="200" height="200"></object>
+      <h4>Should say "From Statics: GOOD"</h4>
+      <object data="/app-static/good.txt" type="text/plain" width="200" height="200"></object>
     </div>
     <div>
-      <h4>/static/bad.txt</h4>
+      <h4>Should say "VOLUME GOOD"</h4>
+      <object data="/vol-static/volume.txt" type="text/plain" width="200" height="200"></object>
+    </div>
+    <div>
+      <h4>Should say "From Elixir: bad.txt"</h4>
       <object data="/static/bad.txt" type="text/plain" width="200" height="200"></object>
     </div>
 
     <div>
-      <h4>/boo/bad.text</h4>
+      <h4>Should say "From Elixir: NOT FOUND"</h4>
       <object data="/boo/bad.txt" type="text/plain" width="200" height="200"></object>
     </div>
   </body>

@@ -13,12 +13,16 @@ defmodule Router do
     send_file(conn, 200, "index.html")
   end
 
-  get "/static/:name" do
-    send_resp(conn, 200, "From Elixir: #{name}")
+  get "/app-static/:name" do
+    send_resp(conn, 200, "App Static Elixir: #{name}")
+  end
+
+  get "/vol-static/:name" do
+    send_resp(conn, 200, "Vol Static Elixir: #{name}")
   end
 
   match _ do
-    send_resp(conn, 200, "From Elixir: NOT FOUND")
+    send_resp(conn, 200, "NOT FOUND ELIXIR")
   end
 end
 

@@ -40,4 +40,12 @@ processes = []
 
 [[statics]]
   guest_path = "/app/static"
-  url_prefix = "/static"
+  url_prefix = "/app-static"
+
+[[statics]]
+  guest_path = "/data"
+  url_prefix = "/vol-static"
+
+[mounts]
+  source = "data"
+  destination = "/data"
